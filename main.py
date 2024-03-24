@@ -150,16 +150,6 @@ def help():
         counter += 1
 
 
-def history():
-    # чтение файла по команде
-    try:
-        with open("comander.txt", "r", encoding="utf-8") as file:
-            for counter, line in enumerate(file):
-                print(f"{counter}. {line}")
-    except FileNotFoundError:
-        print("Фаил не найден!")
-
-
 def main():
     animate(word)  # Запуск анимации с выводом "TERMINAL"
     write_command()  # Обработка команд пользователя после анимации
